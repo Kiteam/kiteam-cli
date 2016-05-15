@@ -1,6 +1,8 @@
 # kiteam-cli
 
-Kiteam的命令行工具，用于初始化Kiteam，以及启动Kiteam等
+Kiteam的命令行工具，用于初始化Kiteam，以及启动Kiteam等。
+
+详细使用文档，请访问 http://kiteam.org
 
 # 安装
 
