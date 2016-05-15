@@ -69,7 +69,7 @@ executeCommand = (command)->
 cloneAndBuild = (repo_name, tempDir, npm)->
   npm = npm || 'cnpm'
   cd tempDir
-#  executeCommand "git clone #{GIT_SITE}#{repo_name}.git"
+  executeCommand "git clone #{GIT_SITE}#{repo_name}.git"
 
   console.log "#{repo_name} clone成功，正在安装..."
   #切换到工作目录
@@ -83,6 +83,8 @@ cloneAndBuild = (repo_name, tempDir, npm)->
 #执行初始化项目
 module.exports = (name, target)->
   target = _path.join target, name if name
-  #return process.exit 1 if not ensureEnv target
+  return process.exit 1 if not ensureEnv target
 
   install target
+  console.log '安装成功，请更新配置文件，然后执行 [kiteam start]'.green
+  console.log '更多关于配置的帮助请访问 http://kiteam.org'.green
